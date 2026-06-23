@@ -30,6 +30,14 @@ module "messaging" {
   environment  = var.environment
 }
 
+module "observability" {
+  source         = "../../modules/observability"
+  project_name   = var.project_name
+  environment    = var.environment
+  alb_arn_suffix = "app/orderflow-alb/8067dc28d2411dac"
+  aws_region     = var.aws_region
+}
+
 # ── ECS + ECR Module ──────────────────────────────────────────
 module "ecs" {
   source = "../../modules/ecs"
