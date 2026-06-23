@@ -1,0 +1,8 @@
+[
+  {
+    "Source": "orderflow.order-service",
+    "DetailType": "order.created",
+    "Detail": "{\"order_id\":\"ORD-001\",\"item\":\"laptop\",\"qty\":1}",
+    "EventBusName": "default"
+  }
+]

@@ -24,6 +24,12 @@ module "networking" {
   environment  = var.environment
 }
 
+module "messaging" {
+  source       = "../../modules/messaging"
+  project_name = var.project_name
+  environment  = var.environment
+}
+
 # ── ECS + ECR Module ──────────────────────────────────────────
 module "ecs" {
   source = "../../modules/ecs"
